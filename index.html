@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambar Accessorios</title>
+    <link rel="stylesheet" href="Frontend/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Ambar Accesorios</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar productos...">
+                <button type="button" onclick="searchProducts()"><i class="fas fa-search"></i></button>
+            </div>           
+             
+            <div class="nav-buttons">
+                <button class="auth-btn" id="loginBtn">
+                    <i class="fas fa-user"></i>
+                    <span>Iniciar Sesión</span>
+                </button>
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">0</span>
+                </button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filters">
+            <div class="filter-container">
+                <select class="filter-select" id="categoryFilter">
+                    <option value="">Categoría</option>
+                    <option value="collares">Collares</option>
+                    <option value="aretes">Aretes</option>
+                    <option value="pulseras">Pulseras</option>
+                    <option value="anillos">Anillos</option>
+                </select>
+                <select id="priceFilter" onchange="applyFilters()">
+                    <option value="">Seleccione un rango de precio</option>
+                    <option value="0-15000">0 a 15,000</option>
+                    <option value="16000-19000">16,000 a 19,000</option>
+                    <option value="20000-29000">20,000 a 29,000</option>
+                    <option value="30000+">30,000 o más</option>
+                </select>
+                <button class="filter-btn">Aplicar Filtros</button>
+            </div>
+
+        </section>
+
+        <section class="products-grid" id="productsContainer">
+            <!-- Ejemplo de tarjetas de productos 
+            
+            <div class="product-card">
+                <img src="Images/Gargantilaa.jpg" alt="Producto 1">
+                <div class="product-info">
+                    <h3>Gargantilla</h3>
+                    <p class="price">$39,900 <span class="discount">$44,900</span></p>
+                    <p class="rating">★★★★☆</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="Images/AnilloSurtidosRodio.jpg" alt="Producto 2">
+                <div class="product-info">
+                    <h3>Anillos</h3>
+                    <p class="price">$20,900 <span class="discount">$24,900</span></p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="Images/PulserasRodio.jpg" alt="Producto 3">
+                <div class="product-info">
+                    <h3>Pulseras</h3>
+                    <p class="price">$20,000 <span class="discount">$22,900</span></p>
+                    <p class="rating">★★★★☆</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="Images/ConjuntoRodio.jpg" alt="Producto 4">
+                <div class="product-info">
+                    <h3>Conjuntos</h3>
+                    <p class="price">$22,000 <span class="discount">$24,900</span></p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="Images/AretesOro.jpg" alt="Producto 5">
+                <div class="product-info">
+                    <h3>Aretes</h3>
+                    <p class="price">$18,000 <span class="discount">$21,900</span></p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="Images/CollarRodio.jpg" alt="Producto 6">
+                <div class="product-info">
+                    <h3>Collares</h3>
+                    <p class="price">$18,000 <span class="discount">$21,900</span></p>
+                    <p class="rating">★★★★★</p>
+                </div>
+            </div>
+            -->
+        </section>
+        <div id="productsContainer"></div>
+    </main>
+    <script src="Frontend/script.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
