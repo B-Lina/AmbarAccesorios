@@ -56,16 +56,6 @@ app.get('/api/productos', (req, res) => {
     });
 });
 
-connection.query(sql, params, (err, results) => {
-    if (err) {
-        console.error('Error al ejecutar la consulta:', err);
-        res.status(500).send('Error en el servidor');
-    } else {
-        console.log('Resultados de la consulta:', results); // Para verificar los datos
-        res.json(results);
-    }
-});
-
 // Ruta para manejar la búsqueda de productos
 app.get('/api/buscar-productos', (req, res) => {
     const { query } = req.query; // Obtener el término de búsqueda
